@@ -7,4 +7,11 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  
+  build: {
+    rollupOptions: {
+      // Garante que dependências externas sejam tratadas corretamente
+      external: [],
+    }
+  }
 });
